@@ -63,7 +63,7 @@
     };
 
     const INVERT_CARDS_DATA = [
-      { id: 'i1', text: '有刺絲胞用於捕食與防禦', target: '刺絲胞', icon: '🪼', type: 'feature' }, 
+      { id: 'i1', text: '有刺絲胞用於捕食與防禦', target: '刺絲胞', icon: '📌', type: 'feature' }, 
       { id: 'i2', text: '身體分節、但各節形態功能不同', target: '節肢', icon: '🧱', type: 'feature' }, 
       { id: 'i3', text: '身體扁平', target: '扁形', icon: '〰️', type: 'feature' },
       { id: 'i4', text: '部分個體有保護柔軟身體的硬殼', target: '軟體', icon: '🐚', type: 'feature' }, 
@@ -73,9 +73,9 @@
       { id: 'i8', text: '成長過程中需要蛻皮', target: '節肢', icon: '👕', type: 'feature' }, 
       { id: 'i9', text: '體表粗糙有棘(刺)，全部海生', target: '棘皮', icon: '🌵', type: 'feature' },
       { id: 'i10', text: '利用「管足」運動', target: '棘皮', icon: '👣', type: 'feature' }, 
-      { id: 'i11', text: '身體細長，由許多相似環狀體節組成', target: '環節', icon: '🚃', type: 'feature' },
+      { id: 'i11', text: '身體細長，由許多相似環狀體節組成', target: '環節', icon: '⛓️', type: 'feature' },
       { id: 'e1', text: '水母 (觸手具特化刺細胞)', target: '刺絲胞', icon: '🪼', type: 'animal' },
-      { id: 'e2', text: '海葵 (行固著生活捕食小魚)', target: '刺絲胞', icon: '🪸', type: 'animal' },
+      { id: 'e2', text: '海葵 (行固著生活捕食小魚)', target: '刺絲胞', icon: '🪷', type: 'animal' },
       { id: 'e3', text: '渦蟲 (行斷裂生殖)', target: '扁形', icon: '➖', type: 'animal' },
       { id: 'e4', text: '絛蟲 (寄生於人畜腸道的扁平狀蟲)', target: '扁形', icon: '🎗️', type: 'animal' },
       { id: 'e5', text: '蝸牛 (具螺旋硬殼)', target: '軟體', icon: '🐌', type: 'animal' },
@@ -99,9 +99,9 @@
 
     const INVERT_QUIZ_DATA = [
       { id: 'iq1', question: "珊瑚、海葵和水母屬於哪一門動物？", options: ["軟體動物門", "刺絲胞動物門", "棘皮動物門", "節肢動物門"], answer: 1, explanation: "珊瑚、海葵和水母都具有觸手，觸手上有刺絲胞，用於捕食和防禦，屬於刺絲胞動物門。" },
-      { id: 'iq2', question: "渦蟲和絛蟲的身體扁平，沒有明顯的體腔，牠們屬於？", options: ["扁形動物門", "環節動物門", "節肢動物門", "刺絲胞動物門"], answer: 0, explanation: "渦蟲與絛蟲身體扁平，多呈葉片狀或帶狀，屬於扁形動物門。" },
+      { id: 'iq2', question: "渦蟲和絛蟲的身體扁平，牠們屬於？", options: ["扁形動物門", "環節動物門", "節肢動物門", "刺絲胞動物門"], answer: 0, explanation: "渦蟲與絛蟲身體扁平，有利於體內的細胞和環境進行物質交換，屬於扁形動物門。" },
       { id: 'iq3', question: "蝸牛、蛤蜊和烏賊雖然外觀差異大，但牠們都屬於軟體動物。下列何者是牠們共同特徵？", options: ["都有堅硬的殼", "身體分節", "身體柔軟", "具有管足"], answer: 2, explanation: "軟體動物的共同特徵是身體柔軟。並非所有軟體動物都有外殼（如烏賊的殼退化在體內）。" },
-      { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["節肢動物門", "扁形動物門", "節肢動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
+      { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["刺絲胞動物門", "扁形動物門", "節肢動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
       { id: 'iq5', question: "動物界中種類最多、數量最龐大的是哪一門？", options: ["軟體動物門", "節肢動物門", "脊索動物門", "環節動物門"], answer: 1, explanation: "節肢動物門包含昆蟲、蜘蛛、蝦蟹等，是動物界中種類和數量最多的一門。" },
       { id: 'iq6', question: "節肢動物成長過程中，為何需要「蛻皮」？", options: ["為了改變體色", "為了更換呼吸器官", "因外骨骼無法隨身體長大而延伸", "為了適應從水生到陸生"], answer: 2, explanation: "節肢動物具有堅硬的外骨骼，雖然有保護作用，但無法隨內部身體成長，因此必須定期脫去舊殼才能長大。" },
       { id: 'iq7', question: "海星、海膽和海參屬於棘皮動物門，牠們主要生活在哪裡？", options: ["淡水環境", "全部生活在海洋中", "陸地潮濕處", "寄生在其他動物體內"], answer: 1, explanation: "棘皮動物門的成員全部都是海生（海洋生物），沒有淡水或陸生物種。" },
@@ -671,7 +671,7 @@
                       ) : (
                         filteredScores.map((score) => (
                           <tr key={score.id} className="hover:bg-slate-50 transition">
-                            <td className="p-3 font-black text-slate-600"><span className="bg-slate-100 px-1.5 py-0.5 rounded">{score.chapterName || '無脊椎動物'}</span></td>
+                            <td className="p-3 font-black text-slate-600"><span className="bg-slate-100 px-1.5 py-0.5 rounded">{score.chapterName || '無脊椎動物'}</span></td> 
                             <td className="p-3 font-bold text-emerald-600">{score.class}班</td>
                             <td className="p-3 text-slate-500">{score.seat} 號</td>
                             <td className="p-3 font-bold">{score.name}</td>
