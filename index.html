@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>國中動物界探究學習網 - 雙主題穩定儲存版</title>
+  <title>國中動物界探究學習網 - 雙主題穩定儲存進度版</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -61,7 +61,7 @@
     }
 
     // ==========================================
-    // 📁 關卡 1: 無脊椎動物 題庫資料 (絕對不變動)
+    // 📁 關卡 1: 無脊椎動物 題庫資料
     // ==========================================
     const INVERT_CATEGORY_META = {
       "刺絲胞": { name: "刺絲胞動物", icon: "🪼", color: "bg-cyan-50 border-cyan-300 text-cyan-800" },
@@ -112,11 +112,11 @@
       { id: 'iq2', question: "渦蟲和絛蟲的身體扁平，沒有明顯的體腔，牠們屬於？", options: ["扁形動物門", "環節動物門", "線形動物門", "刺絲胞動物門"], answer: 0, explanation: "渦蟲與絛蟲身體扁平，多呈葉片狀或帶狀，屬於扁形動物門。" },
       { id: 'iq3', question: "蝸牛、蛤蜊和烏賊雖然外觀差異大，但牠們都屬於軟體動物。下列何者是牠們共同特徵？", options: ["都有堅硬的殼", "身體分節", "身體柔軟", "具有管足"], answer: 2, explanation: "軟體動物的共同特徵是身體柔軟。並非所有軟體動物都有外殼（如烏賊的殼退化在體內）。" },
       { id: 'iq4', question: "蚯蚓和水蛭的身體由許多相似的體節組成，牠們屬於？", options: ["節肢動物門", "扁形動物門", "線形動物門", "環節動物門"], answer: 3, explanation: "蚯蚓和水蛭的身體細長，由許多相似的環狀體節組成，屬於環節動物門。" },
-      { id: 'iq5', text: "動物界中種類最多、數量最龐大的是哪一門？", options: ["軟體動物門", "節肢動物門", "脊索動物門", "環節動物門"], answer: 1, explanation: "節肢動物門包含昆蟲、蜘蛛、蝦蟹等，是動物界中種類和數量最多的一門。" },
+      { id: 'iq5', question: "動物界中種類最多、數量最龐大的是哪一門？", options: ["軟體動物門", "節肢動物門", "脊索動物門", "環節動物門"], answer: 1, explanation: "節肢動物門包含昆蟲、蜘蛛、蝦蟹等，是動物界中種類和數量最多的一門。" },
       { id: 'iq6', question: "節肢動物成長過程中，為何需要「蛻皮」？", options: ["為了改變體色", "為了更換呼吸器官", "因外骨骼無法隨身體長大而延伸", "為了適應從水生到陸生"], answer: 2, explanation: "節肢動物具有堅硬的外骨骼，雖然有保護作用，但無法隨內部身體成長，因此必須定期脫去舊殼才能長大。" },
-      { id: 'iq7', question: "海星、海膽 and 海參屬於棘皮動物門，牠們主要生活在哪裡？", options: ["淡水環境", "全部生活在海洋中", "陸地潮濕處", "寄生在其他動物體內"], answer: 1, explanation: "棘皮動物門的成員全部都是海生（海洋生物），沒有淡水或陸生物種。" },
+      { id: 'iq7', question: "海星、海膽 和 海參屬於棘皮動物門，牠們主要生活在哪裡？", options: ["淡水環境", "全部生活在海洋中", "陸地潮濕處", "寄生在其他動物體內"], answer: 1, explanation: "棘皮動物門的成員全部都是海生（海洋生物），沒有淡水或陸生物種。" },
       { id: 'iq8', question: "海星用來移動和捕食的特殊構造稱為？", options: ["觸手", "附肢", "管足", "纖毛"], answer: 2, explanation: "棘皮動物（如海星）具有獨特的水管系統，其末端突出體表形成「管足」，用於運動與攝食。" },
-      { id: 'iq9', question: "下列哪一種動物「不」屬於節肢動物？", options: ["螞蟻", "蜘蛛", "螃蟹", "蚯蚓"], answer: 3, explanation: "螞蟻、蜘蛛、螃蟹都具有外骨骼和分節的附肢，皆屬於節肢動物。蚯蚓則屬於環節動物。" },
+      { id: 'iq9', question: "下列哪一種動物「不」屬於節肢動物？", options: ["螞蟻", "蜘蛛", "螃蟹", "蚯蚓"], answer: 3, explanation: "螞蟻、蜘蛛、螃蟹都具有外骨骼 and 分節的附肢，皆屬於節肢動物。蚯蚓則屬於環節動物。" },
       { id: 'iq10', question: "區分「環節動物」和「節肢動物」最主要的特徵之一是？", options: ["是否生活在土中", "是否具有外骨骼且具有分節的附肢", "是否為兩性異體", "體型的巨大程度"], answer: 1, explanation: "節肢動物具有堅硬的「外骨骼」及「分節的附肢」（關節），而環節動物（如蚯蚓）則無此構造。" }
     ];
 
@@ -162,29 +162,29 @@
     };
 
     const VERT_ANIMAL_CARDS = [
-      { id: 'va1', name: '鯊魚', target: '軟體魚類', img: 'https://docs.google.com/uc?export=view&id=1KEMK--Fn9UKH1MqkzUXLqmKGtAoyqeOa' },
-      { id: 'va2', name: '魟魚', target: '軟體魚類', img: 'https://docs.google.com/uc?export=view&id=1gYFRqS6pms_xRND6o-9dr5hKdJdzZyRa' },
-      { id: 'va3', name: '吳郭魚', target: '硬骨魚類', img: 'https://docs.google.com/uc?export=view&id=11_iJZAlhzee8SaaNXykIvTUh_jzTY4y-' },
-      { id: 'va4', name: '海馬', target: '硬骨魚類', img: 'https://docs.google.com/uc?export=view&id=1i4MIunu_REfQo8ME7PC1N8J98TN6JJog' },
-      { id: 'va5', name: '彈塗魚', target: '硬骨魚類', img: 'https://docs.google.com/uc?export=view&id=18LbWJwlYveCldrmcLmEGcmCnk3kGtNmD' },
-      { id: 'va6', name: '蛙', target: '兩生類', img: 'https://docs.google.com/uc?export=view&id=1gfo7tzMbduz2u-YyjFnNEGnid3PHjcao' },
-      { id: 'va7', name: '蝌蚪', target: '兩生類', img: 'https://docs.google.com/uc?export=view&id=16CDs3FGwZAVL_ccFnnMsVqp2J11_asia' },
-      { id: 'va8', name: '蟾蜍', target: '兩生類', img: 'https://docs.google.com/uc?export=view&id=17uKSG5l30WTooY0RBedvHWgWPqYr0FBx' },
-      { id: 'va9', name: '山椒魚', target: '兩生類', img: 'https://docs.google.com/uc?export=view&id=15_Z6iY9TM_l1YrOFz-XsdzFlEUyIYdA_' },
-      { id: 'va10', name: '海龜', target: '爬蟲類', img: 'https://docs.google.com/uc?export=view&id=1DV6Ukl4pLDxcN7gE6Emb9JSDhs_L7wR6' },
-      { id: 'va11', name: '蛇', target: '爬蟲類', img: 'https://docs.google.com/uc?export=view&id=1nRBQZdtOESfdq--zlqwsHmbf71eMA9NY' },
-      { id: 'va12', name: '鱷魚', target: '爬蟲類', img: 'https://docs.google.com/uc?export=view&id=1dNE3JSx_okA9YuQzSOFrzex7eGoGt1NW' },
-      { id: 'va13', name: '蜥蜴', target: '爬蟲類', img: 'https://docs.google.com/uc?export=view&id=1Tjdif61_M6fEyX_EbhJY75AlBdeOJA3I' },
-      { id: 'va14', name: '台灣藍鵲', target: '鳥類', img: 'https://docs.google.com/uc?export=view&id=1HMJYO-cU0tjK-a7NYtFGPOzacqHra-RM' },
-      { id: 'va15', name: '鴕鳥', target: '鳥類', img: 'https://docs.google.com/uc?export=view&id=1a91HYvD_Ol_cK6bGsBy1CZ_sP6QtDJ6h' },
-      { id: 'va16', name: '企鵝', target: '鳥類', img: 'https://docs.google.com/uc?export=view&id=1sAdF2PaNnGIqnHlwQwwsaR_YrpIrK_v2' },
-      { id: 'va17', name: '奇異鳥', target: '鳥類', img: 'https://docs.google.com/uc?export=view&id=1ZNfbzgdTqX4Dt8vA0sgxVEas2ZmYWzGH' },
-      { id: 'va18', name: '鴨嘴獸', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=1hPKpGwPbdmWH3COxvUcX7-7f5cvfzNjm' },
-      { id: 'va19', name: '袋鼠', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=16UTGDsgOHv_ccQY3Xr2SaOEN4YG90DYL' },
-      { id: 'va20', name: '無尾熊', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=1RnEcyx6o7V7sDkw60-F7cTiJtUYpDu_t' },
-      { id: 'va21', name: '海豚', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=10B5VTq-FUnEo9_umSthLhkO0D8dWEQIW' },
-      { id: 'va22', name: '蝙蝠', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=1G-gjE4G8PKAcyONQuT8plzDdRChzZTrK' },
-      { id: 'va23', name: '穿山甲', target: '哺乳類', img: 'https://docs.google.com/uc?export=view&id=1SRGK6rMSDNm3wMiQpL9_XUTUq5WCQBO4' }
+      { id: 'va1', name: '鯊魚', target: '軟體魚類', img: 'https://lh3.googleusercontent.com/d/1KEMK--Fn9UKH1MqkzUXLqmKGtAoyqeOa', rawId: '1KEMK--Fn9UKH1MqkzUXLqmKGtAoyqeOa' },
+      { id: 'va2', name: '魟魚', target: '軟體魚類', img: 'https://lh3.googleusercontent.com/d/1gYFRqS6pms_xRND6o-9dr5hKdJdzZyRa', rawId: '1gYFRqS6pms_xRND6o-9dr5hKdJdzZyRa' },
+      { id: 'va3', name: '吳郭魚', target: '硬骨魚類', img: 'https://lh3.googleusercontent.com/d/11_iJZAlhzee8SaaNXykIvTUh_jzTY4y-', rawId: '11_iJZAlhzee8SaaNXykIvTUh_jzTY4y-' },
+      { id: 'va4', name: '海馬', target: '硬骨魚類', img: 'https://lh3.googleusercontent.com/d/1i4MIunu_REfQo8ME7PC1N8J98TN6JJog', rawId: '1i4MIunu_REfQo8ME7PC1N8J98TN6JJog' },
+      { id: 'va5', name: '彈塗魚', target: '硬骨魚類', img: 'https://lh3.googleusercontent.com/d/18LbWJwlYveCldrmcLmEGcmCnk3kGtNmD', rawId: '18LbWJwlYveCldrmcLmEGcmCnk3kGtNmD' },
+      { id: 'va6', name: '蛙', target: '兩生類', img: 'https://lh3.googleusercontent.com/d/1gfo7tzMbduz2u-YyjFnNEGnid3PHjcao', rawId: '1gfo7tzMbduz2u-YyjFnNEGnid3PHjcao' },
+      { id: 'va7', name: '蝌蚪', target: '兩生類', img: 'https://lh3.googleusercontent.com/d/16CDs3FGwZAVL_ccFnnMsVqp2J11_asia', rawId: '16CDs3FGwZAVL_ccFnnMsVqp2J11_asia' },
+      { id: 'va8', name: '蟾蜍', target: '兩生類', img: 'https://lh3.googleusercontent.com/d/17uKSG5l30WTooY0RBedvHWgWPqYr0FBx', rawId: '17uKSG5l30WTooY0RBedvHWgWPqYr0FBx' },
+      { id: 'va9', name: '山椒魚', target: '兩生類', img: 'https://lh3.googleusercontent.com/d/15_Z6iY9TM_l1YrOFz-XsdzFlEUyIYdA_', rawId: '15_Z6iY9TM_l1YrOFz-XsdzFlEUyIYdA_' },
+      { id: 'va10', name: '海龜', target: '爬蟲類', img: 'https://lh3.googleusercontent.com/d/1DV6Ukl4pLDxcN7gE6Emb9JSDhs_L7wR6', rawId: '1DV6Ukl4pLDxcN7gE6Emb9JSDhs_L7wR6' },
+      { id: 'va11', name: '蛇', target: '爬蟲類', img: 'https://lh3.googleusercontent.com/d/1nRBQZdtOESfdq--zlqwsHmbf71eMA9NY', rawId: '1nRBQZdtOESfdq--zlqwsHmbf71eMA9NY' },
+      { id: 'va12', name: '鱷魚', target: '爬蟲類', img: 'https://lh3.googleusercontent.com/d/1dNE3JSx_okA9YuQzSOFrzex7eGoGt1NW', rawId: '1dNE3JSx_okA9YuQzSOFrzex7eGoGt1NW' },
+      { id: 'va13', name: '蜥蜴', target: '爬蟲類', img: 'https://lh3.googleusercontent.com/d/1Tjdif61_M6fEyX_EbhJY75AlBdeOJA3I', rawId: '1Tjdif61_M6fEyX_EbhJY75AlBdeOJA3I' },
+      { id: 'va14', name: '台灣藍鵲', target: '鳥類', img: 'https://lh3.googleusercontent.com/d/1HMJYO-cU0tjK-a7NYtFGPOzacqHra-RM', rawId: '1HMJYO-cU0tjK-a7NYtFGPOzacqHra-RM' },
+      { id: 'va15', name: '鴕鳥', target: '鳥類', img: 'https://lh3.googleusercontent.com/d/1a91HYvD_Ol_cK6bGsBy1CZ_sP6QtDJ6h', rawId: '1a91HYvD_Ol_cK6bGsBy1CZ_sP6QtDJ6h' },
+      { id: 'va16', name: '企鵝', target: '鳥類', img: 'https://lh3.googleusercontent.com/d/1sAdF2PaNnGIqnHlwQwwsaR_YrpIrK_v2', rawId: '1sAdF2PaNnGIqnHlwQwwsaR_YrpIrK_v2' },
+      { id: 'va17', name: '奇異鳥', target: '鳥類', img: 'https://lh3.googleusercontent.com/d/1ZNfbzgdTqX4Dt8vA0sgxVEas2ZmYWzGH', rawId: '1ZNfbzgdTqX4Dt8vA0sgxVEas2ZmYWzGH' },
+      { id: 'va18', name: '鴨嘴獸', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/1hPKpGwPbdmWH3COxvUcX7-7f5cvfzNjm', rawId: '1hPKpGwPbdmWH3COxvUcX7-7f5cvfzNjm' },
+      { id: 'va19', name: '袋鼠', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/16UTGDsgOHv_ccQY3Xr2SaOEN4YG90DYL', rawId: '16UTGDsgOHv_ccQY3Xr2SaOEN4YG90DYL' },
+      { id: 'va20', name: '無尾熊', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/1RnEcyx6o7V7sDkw60-F7cTiJtUYpDu_t', rawId: '1RnEcyx6o7V7sDkw60-F7cTiJtUYpDu_t' },
+      { id: 'va21', name: '海豚', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/10B5VTq-FUnEo9_umSthLhkO0D8dWEQIW', rawId: '10B5VTq-FUnEo9_umSthLhkO0D8dWEQIW' },
+      { id: 'va22', name: '蝙蝠', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/1G-gjE4G8PKAcyONQuT8plzDdRChzZTrK', rawId: '1G-gjE4G8PKAcyONQuT8plzDdRChzZTrK' },
+      { id: 'va23', name: '穿山甲', target: '哺乳類', img: 'https://lh3.googleusercontent.com/d/1SRGK6rMSDNm3wMiQpL9_XUTUq5WCQBO4', rawId: '1SRGK6rMSDNm3wMiQpL9_XUTUq5WCQBO4' }
     ];
 
     const VERT_KNOWLEDGE_CARDS = [
@@ -200,9 +200,9 @@
       { id: 'vq2', question: "青蛙和山椒魚屬於兩生類，牠們為什麼不能完全離開陰暗潮濕的環境？", options: ["因為牠們完全用鰓呼吸", "因為牠們的皮膚無法防止水分散失，且肺不發達需靠濕潤皮膚輔助呼吸", "因為牠們是內溫動物", "因為牠們只吃水中的昆蟲"], answer: 1, explanation: "兩生類體表裸露沒有鱗片或毛髮阻擋水分散失，且成體肺部發育不完全，高度依賴濕潤的皮膚來進行氣體交換，因此無法離開潮濕環境。" },
       { id: 'vq3', question: "蜥蜴、蛇和烏龜比青蛙更能適應乾燥的陸地生活，最關鍵的特徵是？", options: ["體表具有鱗片或骨板防水分散失", "心臟具有兩心房兩心室", "四肢變得更加粗壯", "改用皮膚進行呼吸"], answer: 0, explanation: "爬蟲類體表具有角質鱗片或骨板，能有效防止體內水分蒸散，這是牠們能完全征服陸地、適應乾燥環境的關鍵構造。" },
       { id: 'vq4', question: "鳥類的骨骼具有「中空、輕盈」的特徵，這在演化上的主要適應意義為何？", options: ["方便產下體型較大的卵", "降低體溫以適應高空環境", "減輕體重以利於飛行", "增加骨髓儲存脂肪的空間"], answer: 2, explanation: "鳥類骨骼中空且質輕，配上流線型體型與特化的羽毛、氣囊，都是為了減輕體重、提高飛行效率的演化適應。" },
-      { id: 'vq5', question: "蝙蝠會飛，海豚生活在海裡。請問牠們在分類上屬於哪一類動物？", options: ["蝙蝠是鳥類，海豚是魚類", "蝙蝠是哺乳類，海豚是魚類", "蝙蝠是鳥類，海豚是哺乳類", "兩者皆屬於哺乳類"], answer: 3, explanation: "蝙蝠與海豚雖然外觀與生活環境不同，打牠們都具備「胎生、哺乳、體表有毛、分泌乳汁」的特徵，皆屬於哺乳類。" },
+      { id: 'vq5', question: "蝙蝠會飛，海豚生活在海裡。請問牠們在分類上屬於哪一類動物？", options: ["蝙蝠是鳥類，海豚是魚類", "蝙蝠是哺乳類，海豚是魚類", "蝙蝠是鳥類，海豚是哺乳類", "兩者皆屬於哺乳類"], answer: 3, explanation: "蝙蝠與海豚雖然外觀與生活環境不同，但牠們都具備「胎生、哺乳、體表有毛、分泌乳汁」的特徵，皆屬於哺乳類。" },
       { id: 'vq6', question: "脊椎動物中，屬於「內溫動物(恆溫)」的組合是？", options: ["鳥類、哺乳類", "魚類、兩生類、爬蟲類", "爬蟲類、鳥類", "兩生類、哺乳類"], answer: 0, explanation: "鳥類和哺乳類能靠體內代謝產生熱量並維持恆定的體溫，屬於內溫動物；魚類、兩生類、爬蟲類則會隨環境改變體溫，為外溫動物。" },
-      { id: 'vq7', question: "鴨嘴獸和針鼴雖然會「產卵」(卵生)，但科學家仍將牠們歸類為「哺乳類」的原因是？", options: ["牠們是變溫動物", "牠們具有羽毛構造", "牠們具有乳腺，會分泌乳汁哺育幼兒", "牠們生活在陸地上"], answer: 2, explanation: "哺乳類最核心的定義特徵是「具備乳腺能哺乳」。鴨嘴獸與針鼴是演化上最原始的哺乳類，雖然卵生，但仍用乳汁哺育後代。" },
+      { id: 'vq7', question: "鴨嘴獸和針鼴雖然會「產卵」(卵生)，但科學家仍將牠們歸類為「哺乳類」的原因是？", options: ["體溫是變溫動物", "牠們具有羽毛構造", "牠們具有乳腺，會分泌乳汁哺育幼兒", "體生活在陸地上"], answer: 2, explanation: "哺乳類最核心的定義特徵是「具備乳腺能哺乳」。鴨嘴獸與針鼴是演化上最原始的哺乳類，雖然卵生，但仍用乳汁哺育後代。" },
       { id: 'vq8', question: "下列哪一種生物屬於兩生類、且「終生保有尾巴」？", options: ["青蛙", "山椒魚", "壁虎", "海龜"], answer: 1, explanation: "山椒魚屬於兩生類中的「有尾目」，成體依然保有尾巴。青蛙屬於無尾目；壁虎和烏龜則是爬蟲類。" },
       { id: 'vq9', question: "關於鳥類「氣囊」的功能，下列敘述何者正確？", options: ["可以代替肺進行氣體交換", "能儲存空氣輔助呼吸，並在飛行時幫助散熱與減輕比重", "用來消化未磨碎的穀物", "是用來發出聲音的鳴叫構造"], answer: 1, explanation: "鳥類的氣囊不直接進行氣體交換，但能儲存空氣讓肺部在吸氣與呼氣時都能獲得氧氣（雙重呼吸），並協助散熱與減輕比重。" },
       { id: 'vq10', question: "海龜、海豚、海馬三種生活在海中的脊椎動物，其分類由演化先到後依序為？", options: ["魚類 ➔ 爬蟲類 ➔ 哺乳類", "爬蟲類 ➔ 哺乳類 ➔ 魚類", "魚類 ➔ 哺乳類 ➔ 爬蟲類", "哺乳類 ➔ 爬蟲類 ➔ 魚類"], answer: 0, explanation: "海馬是用鰓呼吸的硬骨「魚類」；海龜是用肺呼吸、有骨板的「爬蟲類」；海豚則是胎生哺乳的「哺乳類」，故依演化順序為魚類➔爬蟲類➔哺乳類。" }
@@ -241,7 +241,9 @@
       const [vertFeatureErrorId, setVertFeatureErrorId] = useState(null);
       const [vertAnimalErrorId, setVertAnimalErrorId] = useState(null);
 
-      // 【修正1】將構造特徵卡牌改為「洗牌打亂順序」
+      const [isSavingProgress, setIsSavingProgress] = useState(false);
+
+      // 卡牌隨機打亂
       const shuffledVertFeatures = useMemo(() => {
         const remaining = VERT_FEATURE_CARDS.filter(f => !vertMatchedFeatures.some(m => m.id === f.id));
         return shuffleArray(remaining);
@@ -252,7 +254,6 @@
         return shuffleArray(remaining);
       }, [vertMatchedAnimals, seed]);
 
-      // 無脊椎動物剩餘卡牌池 (保持原本邏輯)
       const poolCards = useMemo(() => {
         const remaining = INVERT_CARDS_DATA.filter(c => !matchedCards.some(m => m.id === c.id));
         return shuffleArray(remaining);
@@ -305,6 +306,7 @@
         }
       }, [userRole, refreshTrigger]);
 
+      // 🚀 進入單元時，自動讀取雲端該學生的暫存進度
       const startChapter = (mode) => {
         setGameMode(mode);
         setWrongCount(0);
@@ -320,7 +322,83 @@
         setVertSubTab('feature');
         setActiveTab('knowledge');
         setSeed(prev => prev + 1);
-        setUserRole('game_core');
+
+        // 從 Firebase 搜尋該名學生是否有未完成的存檔
+        const docId = `${studentClass}_${studentSeat}_${studentName}_${mode}`;
+        db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).get()
+          .then((doc) => {
+            if (doc.exists) {
+              const data = doc.data();
+              if (window.confirm(`✨ 發現你在上次課堂中有未完成的【${mode==='invert'?'無脊椎':'脊椎'}動物】進度！\n是否幫你載入舊紀錄繼續挑戰？`)) {
+                setWrongCount(data.wrongCount || 0);
+                setUserQuizAnswers(data.userQuizAnswers || {});
+                if (mode === 'invert') {
+                  setMatchedCards(data.matchedCards || []);
+                } else {
+                  setVertMatchedFeatures(data.vertMatchedFeatures || []);
+                  setVertMatchedAnimals(data.vertMatchedAnimals || []);
+                }
+                alert('🎉 進度讀取成功，請繼續加油！');
+              }
+            }
+          })
+          .catch(err => console.log("讀取進度失敗:", err))
+          .finally(() => {
+            setUserRole('game_core');
+          });
+      };
+
+      // 💾 學生中途儲存進度按鈕
+      const saveStudentProgress = () => {
+        setIsSavingProgress(true);
+        const docId = `${studentClass}_${studentSeat}_${studentName}_${gameMode}`;
+        
+        const draftData = {
+          class: studentClass,
+          seat: studentSeat,
+          name: studentName,
+          gameMode,
+          wrongCount,
+          userQuizAnswers,
+          lastUpdated: new Date().toLocaleString(),
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        };
+
+        if (gameMode === 'invert') {
+          draftData.matchedCards = matchedCards;
+        } else {
+          draftData.vertMatchedFeatures = vertMatchedFeatures;
+          draftData.vertMatchedAnimals = vertMatchedAnimals;
+        }
+
+        db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).set(draftData)
+          .then(() => {
+            alert('💾 進度儲存成功！下次使用同班級、座號、姓名登入即可繼續挑戰。');
+          })
+          .catch(err => alert('儲存失敗：' + err.message))
+          .finally(() => setIsSavingProgress(false));
+      };
+
+      // 🔄 學生重新開始全新練習按鈕
+      const handleRestartGame = () => {
+        if (window.confirm("⚠️ 確定要重新開始挑戰嗎？這將會清空本單元目前的所有進度並重新洗牌。")) {
+          setWrongCount(0);
+          setIsQuizSubmitted(false);
+          setUserQuizAnswers({});
+          setFinalQuizScore(0);
+          setSelectedCard(null);
+          setMatchedCards([]);
+          setVertMatchedFeatures([]);
+          setVertMatchedAnimals([]);
+          setSelectedVertFeature(null);
+          setSelectedVertAnimal(null);
+          setSeed(prev => prev + 1);
+          
+          // 同步刪除雲端暫存檔
+          const docId = `${studentClass}_${studentSeat}_${studentName}_${gameMode}`;
+          db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).delete().catch(()=>{});
+          alert('🔄 遊戲已初始化，卡牌已重新打亂！開始吧！');
+        }
       };
 
       const handleLogin = (role) => {
@@ -340,7 +418,6 @@
           .catch(err => alert('儲存失敗：' + err.message));
       };
 
-      // 【無脊椎動物專用】配對點擊邏輯 (完全保留)
       const handleInvertBoxClick = (categoryKey) => {
         if (isQuizSubmitted || !selectedCard) return;
         if (selectedCard.target === categoryKey) {
@@ -354,7 +431,6 @@
         }
       };
 
-      // 【脊椎動物遊戲 A】點擊盒子邏輯
       const handleVertFeatureBoxClick = (categoryKey) => {
         if (isQuizSubmitted || !selectedVertFeature) return;
         if (selectedVertFeature.target === categoryKey) {
@@ -369,7 +445,6 @@
         }
       };
 
-      // 【脊椎動物遊戲 B】點擊盒子邏輯
       const handleVertAnimalBoxClick = (categoryKey) => {
         if (isQuizSubmitted || !selectedVertAnimal) return;
         if (selectedVertAnimal.target === categoryKey) {
@@ -404,11 +479,12 @@
               : `• 🧠 實作配對：特徵與圖片分類尚未完全歸位（剩餘 ${remainingCards} 處）。\n`;
           }
           if (remainingQuiz > 0) alertMsg += `• 📝 實戰測驗題：還有 ${remainingQuiz} 題尚未作答。\n`;
+          alertMsg += "\n💡 如果這堂課時間不夠，可以先在「實作配對」分頁點選「儲存並上傳目前配對進度」，下次可以繼續寫喔！";
           alert(alertMsg);
           return;
         }
 
-        if (window.confirm("確定兩部分皆完成，要正式「交卷對答案」了嗎？")) {
+        if (window.confirm("確定兩部分皆完成，要正式「交卷對答案」了嗎？（送出後本次成績將計入後台）")) {
           const quizData = gameMode === 'invert' ? INVERT_QUIZ_DATA : VERT_QUIZ_DATA;
           let correctCount = 0;
           quizData.forEach(q => {
@@ -418,7 +494,7 @@
           
           setFinalQuizScore(calculatedQuizScore);
           setIsQuizSubmitted(true); 
-          setActiveTab('quiz');     
+          setActiveTab('result');     
 
           const calculatedTotal = Math.round((matchScore * 0.6) + (calculatedQuizScore * 0.4));
           db.collection('artifacts').doc(appId).collection('student_scores').add({
@@ -433,7 +509,10 @@
             time: new Date().toLocaleString(),
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
           }).then(() => {
-            alert('🎉 評分成功！成績已傳送至老師後台。');
+            alert('🎉 評分成功！成績已傳送至老師後台。快手同學可以點擊上方「重新開始挑戰」重複刷分喔！');
+            // 清除已完成的暫存檔
+            const docId = `${studentClass}_${studentSeat}_${studentName}_${gameMode}`;
+            db.collection('artifacts').doc(appId).collection('student_drafts').doc(docId).delete().catch(()=>{});
           }).catch((err) => console.warn(err.message));
         }
       };
@@ -445,7 +524,7 @@
           {userRole === 'login' && (
             <div className="max-w-md mx-auto mt-16 bg-white p-6 rounded-2xl shadow-xl border border-slate-200">
               <h2 className="text-xl md:text-2xl font-black text-center text-emerald-600 mb-6 flex items-center justify-center gap-2">
-                <span>🧬</span> 國中生物探究學習網 3.2
+                <span>🧬</span> 國中生物探究學習網 3.5
               </h2>
               <div className="space-y-4 mb-6">
                 <div>
@@ -476,6 +555,7 @@
               <div className="text-center mb-6">
                 <p className="text-emerald-600 font-bold mb-1">👋 {studentClass}班 {studentSeat}號 {studentName} 同學</p>
                 <h1 className="text-2xl font-black text-slate-800">🐋 請選擇今日要探究的生物進度...</h1>
+                <p className="text-xs text-slate-400 mt-2">💡 溫馨提醒：系統支援中途存檔，下次登入相同姓名座號可還原喔！</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <button 
@@ -503,7 +583,10 @@
           {userRole === 'game_core' && (
             <div className="max-w-6xl mx-auto bg-white p-3 md:p-6 rounded-2xl shadow-xl border border-slate-200">
               <div className="flex flex-col sm:flex-row justify-between items-center mb-4 pb-2 border-b gap-2">
-                <button onClick={() => { if(!isQuizSubmitted && !window.confirm("你尚未交卷，進度會遺失。確定離開？")) return; setUserRole('student_home'); }} className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg font-bold text-slate-600">⬅️ 返回主選單</button>
+                <div className="flex gap-2">
+                  <button onClick={() => { if(!isQuizSubmitted && !window.confirm("你尚未交卷，確定回大廳？（建議先點擊下方儲存進度）")) return; setUserRole('student_home'); }} className="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg font-bold text-slate-600">⬅️ 返回主選單</button>
+                  <button onClick={handleRestartGame} className="text-xs bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100 px-3 py-1.5 rounded-lg font-bold">🔄 重新開始挑戰</button>
+                </div>
                 <span className="text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full">🎯 當前單元：{gameMode === 'invert'?'無脊椎動物':'脊椎動物'} | 學生：{studentClass}班{studentSeat}號【{studentName}】</span>
               </div>
               
@@ -528,11 +611,16 @@
 
               {/* TAB 2: 🧠 實作配對區 */}
               {activeTab === 'matching' && gameMode === 'invert' && (
-                // ================== 【無脊椎動物 配對面板 (完全保留)】 ==================
                 <div>
-                  <div className="mb-4 bg-slate-50 p-3 rounded-xl border flex justify-between items-center text-xs">
-                    <span className="font-bold">配對進度：{matchedCards.length} / {INVERT_CARDS_DATA.length} | 扣分累計：{wrongCount}次</span>
-                    <span className="font-black text-emerald-700">當前得分率：{matchScore}分</span>
+                  <div className="mb-4 bg-slate-50 p-3 rounded-xl border flex flex-col sm:flex-row justify-between items-center text-xs gap-2">
+                    <span className="font-bold">配對進度：{matchedCards.length} / {INVERT_CARDS_DATA.length} | 扣分累計：{wrongCount}次 | 得分率：{matchScore}分</span>
+                    <button 
+                      onClick={saveStudentProgress} 
+                      disabled={isSavingProgress}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1.5 rounded-lg shadow-sm transition"
+                    >
+                      {isSavingProgress ? '正在上傳...' : '💾 儲存並上傳目前配對進度'}
+                    </button>
                   </div>
                   {poolCards.length > 0 ? (
                     <div className="max-w-md mx-auto bg-slate-50 p-6 rounded-2xl border-2 border-dashed mb-6 text-center shadow-inner">
@@ -550,7 +638,7 @@
                         </div>
                       </button>
                     </div>
-                  ) : <div className="text-center p-6 text-emerald-700 font-bold">🎉 無脊椎分類完成！</div>}
+                  ) : <div className="text-center p-6 text-emerald-700 font-bold">🎉 無脊椎分類完成！請點選「實戰測驗」繼續挑戰。</div>}
 
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {Object.keys(INVERT_CATEGORY_META).map((key) => (
@@ -568,17 +656,20 @@
               )}
 
               {activeTab === 'matching' && gameMode === 'vert' && (
-                // ================== 【脊椎動物 雙遊戲面板】 ==================
                 <div>
                   <div className="mb-4 bg-slate-50 p-3 rounded-xl border flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
                     <div className="flex gap-2 font-bold">
-                      <span>📊 整體進度：{vertMatchedFeatures.length + vertMatchedAnimals.length} / 41</span>
-                      <span className="text-rose-500">❌ 點錯扣分次數：{wrongCount} 次</span>
+                      <span>📊 整體進度：{vertMatchedFeatures.length + vertMatchedAnimals.length} / 41 | 扣分次數：{wrongCount} 次 | 配對得分率：{matchScore} 分</span>
                     </div>
-                    <span className="font-black text-emerald-700 text-sm">即時配對得分率：{matchScore} 分</span>
+                    <button 
+                      onClick={saveStudentProgress} 
+                      disabled={isSavingProgress}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1.5 rounded-lg shadow-sm transition"
+                    >
+                      {isSavingProgress ? '正在上傳...' : '💾 儲存並上傳目前配對進度'}
+                    </button>
                   </div>
 
-                  {/* 雙遊戲切換按鈕 */}
                   <div className="flex gap-2 mb-6 font-bold text-xs justify-center">
                     <button onClick={() => setVertSubTab('feature')} className={`px-4 py-2 rounded-full border transition ${vertSubTab === 'feature' ? 'bg-amber-500 text-white border-amber-500 shadow' : 'bg-white text-slate-600'}`}>一、構造特徵配對 ({vertMatchedFeatures.length}/18)</button>
                     <button onClick={() => setVertSubTab('animal')} className={`px-4 py-2 rounded-full border transition ${vertSubTab === 'animal' ? 'bg-blue-500 text-white border-blue-500 shadow' : 'bg-white text-slate-600'}`}>二、動物實例分類 ({vertMatchedAnimals.length}/23)</button>
@@ -591,7 +682,6 @@
                         🎯 玩法說明：點選下方任一特徵卡牌（選定後會變色），再點選下方 5 個類別方盒，即可將特徵歸類。放錯會放不進去，並提示再試一次且會扣分！
                       </div>
 
-                      {/* 一次秀出所有剩餘特徵卡牌（已修正：亂序排列） */}
                       {shuffledVertFeatures.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-6">
                           {shuffledVertFeatures.map(card => (
@@ -613,7 +703,6 @@
                         </div>
                       )}
 
-                      {/* 遊戲 A：5 個分類盒 */}
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
                         {Object.keys(VERT_FEATURE_META).map((key) => {
                           const box = VERT_FEATURE_META[key];
@@ -648,10 +737,9 @@
                   {vertSubTab === 'animal' && (
                     <div>
                       <div className="bg-blue-50/60 p-3 rounded-xl text-xs text-blue-800 mb-4 font-bold border border-blue-200">
-                        🎯 玩法說明：每次只會顯示一張動物圖片。點選圖片卡牌使其變色選定後，點擊下方 6 個分類盒進行歸類。放錯會放不進去，提示再試一次並扣分。歸類正確才會顯示下一張圖片！
+                        🎯 玩法說明：每次顯示一張動物圖片。點選圖片區使其變色選定，再點擊下方 6 個分類盒進行歸類。歸類正確才會更換下一張圖片！
                       </div>
 
-                      {/* 一次只顯示一張卡牌 */}
                       {poolVertAnimals.length > 0 ? (
                         <div className="max-w-xs mx-auto bg-slate-50 p-4 rounded-2xl border-2 border-dashed mb-6 text-center shadow-inner flex flex-col items-center">
                           <button
@@ -661,27 +749,35 @@
                               ${vertAnimalErrorId === poolVertAnimals[0].id ? 'animate-shake border-rose-500 bg-rose-50' : ''}
                             `}
                           >
-                            {/* 【修正2】補上 referrerPolicy="no-referrer" 解除雲端硬碟圖片阻擋 */}
-                            <div className="w-full h-40 bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center relative">
+                            <div className="w-full h-44 bg-slate-100 rounded-xl overflow-hidden flex items-center justify-center relative border shadow-inner">
                               <img 
                                 src={poolVertAnimals[0].img} 
                                 alt={poolVertAnimals[0].name}
-                                referrerPolicy="no-referrer"
-                                className="w-full h-full object-cover relative z-10"
-                                onError={(e) => { e.target.style.display='none'; }}
+                                className="w-full h-full object-contain relative z-10 block"
+                                onError={(e) => { 
+                                  e.target.src = `https://lh3.googleusercontent.com/d/$${poolVertAnimals[0].rawId}`;
+                                }}
                               />
-                              <span className="absolute inset-0 flex items-center justify-center text-slate-400 text-xs font-bold bg-slate-100">[ 圖片加載中... ]</span>
+                              <span className="absolute inset-0 flex items-center justify-center text-slate-400 text-xs font-bold bg-slate-50">[ 圖片加載中... ]</span>
                             </div>
-                            <p className="font-black text-slate-800 text-sm tracking-wide">{poolVertAnimals[0].name}</p>
+                            <p className="font-black text-slate-800 text-sm tracking-wide mt-1">📸 本張實例：{poolVertAnimals[0].name}</p>
                           </button>
+                          
+                          <a 
+                            href={`https://lh3.googleusercontent.com/d/$${poolVertAnimals[0].rawId}`} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="mt-2 text-[11px] text-blue-600 underline font-bold hover:text-blue-800"
+                          >
+                            🔍 學校網路若阻擋圖片？點此另開視窗觀看
+                          </a>
                         </div>
                       ) : (
                         <div className="bg-emerald-50 text-emerald-800 font-bold p-6 rounded-xl text-center mb-6 border max-w-md mx-auto text-sm">
-                          🎉 太完美了！23 張動物實例圖片皆已全部正確完成分類！
+                          🎉 太完美了！23 張動物實例圖片皆已全部正確完成分類！請點選上面的「實戰測驗」分頁。
                         </div>
                       )}
 
-                      {/* 遊戲 B：細分 6 個分類盒 */}
                       <div className="grid grid-cols-2 md:grid-cols-6 gap-2">
                         {Object.keys(VERT_ANIMAL_META).map((key) => {
                           const box = VERT_ANIMAL_META[key];
@@ -699,8 +795,8 @@
                               </div>
                               <div className="my-1.5 flex-grow overflow-y-auto max-h-[110px] flex flex-wrap gap-1 content-start custom-scrollbar">
                                 {matchedItems.map(item => (
-                                  <div key={item.id} className="text-[10px] bg-blue-50 text-blue-800 border border-blue-200 px-1 py-0.5 rounded font-bold flex items-center gap-0.5">
-                                    📸 {item.name}
+                                  <div key={item.id} className="text-[10px] bg-blue-50 text-blue-800 border border-blue-200 px-1.5 py-0.5 rounded font-bold flex items-center">
+                                    {item.name}
                                   </div>
                                 ))}
                               </div>
@@ -775,7 +871,7 @@
                         <p className="text-xs font-bold opacity-80">⚖️ 加權總成績 (配對60% + 測驗40%)</p>
                         <p className="text-3xl font-black">{Math.round((matchScore * 0.6) + (finalQuizScore * 0.4))} 分</p>
                       </div>
-                      <p className="text-xs text-slate-400 pt-2 font-medium">✨ 成績已連線即時同步，老師在後台可以直接查閱喔！</p>
+                      <p className="text-xs text-slate-400 pt-2 font-medium">✨ 本次挑戰完成！老師在後台可以直接查閱。如果想要刷更高分，可以點選左上方「重新開始挑戰」按鈕再次練習！</p>
                     </div>
                   ) : (
                     <div className="p-8 text-slate-400 font-bold text-sm">📭 請完成配對並至「實戰測驗」完成正式交卷後，方可解鎖本報告！</div>
@@ -826,7 +922,7 @@
               </div>
 
               <div>
-                <h2 className="text-sm font-black text-slate-600 mb-3">📈 學生交卷即時看板</h2>
+                <h2 className="text-sm font-black text-slate-600 mb-3">📈 學生交卷即時看板 (支援重複練習，可查看最高分)</h2>
                 <div className="border border-slate-200 rounded-xl overflow-hidden shadow-inner bg-slate-50">
                   <table className="w-full text-left border-collapse text-xs md:text-sm">
                     <thead>
