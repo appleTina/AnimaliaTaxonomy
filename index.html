@@ -750,7 +750,8 @@
                                 alt={poolVertAnimals[0].name}
                                 className="w-full h-full object-contain relative z-10 block"
                                 onError={(e) => { 
-                                  e.target.src = "https://lh3.googleusercontent.com/d/" + poolVertAnimals[0].rawId;
+                                  e.target.onerror = null; // 
+                                  e.target.src = "https://placehold.co/200?text=Image+Error";
                                 }}
                               />
                               <span className="absolute inset-0 flex items-center justify-center text-slate-400 text-xs font-bold bg-slate-50">[ 圖片加載中... ]</span>
